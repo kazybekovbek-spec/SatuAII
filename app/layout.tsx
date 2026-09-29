@@ -1,16 +1,16 @@
-import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import Script from "next/script";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "SatuAI",
   description: "Адамға AI бизнес көмекші",
 };
 
 export default function RootLayout({
   children,
-}: {
-  children: ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="kk">
       <body style={{ margin: 0 }}>
@@ -41,26 +41,6 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
-      </body>
-    </html>
-  );
-}
-import type { ReactNode } from "react";
-
-export const metadata = {
-  title: "SatuAI",
-  description: "Ақылды AI бизнес көмекші",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
-  return (
-    <html lang="kk">
-      <body style={{ margin: 0 }}>
-        {children}
       </body>
     </html>
   );
